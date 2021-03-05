@@ -198,11 +198,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Daniel Mar\\source\\repos\\BTP.Test.JDM\\BTP.Test.JDM.BackEnd.API\\BTP.Test.JDM.BackEnd.API.csproj",
+      "projectUniqueName": "C:\\Git\\Test\\BTP.Test.JDM\\BTP.Test.JDM.BackEnd.API\\BTP.Test.JDM.BackEnd.API.csproj",
       "projectName": "BTP.Test.JDM.BackEnd.API",
-      "projectPath": "C:\\Users\\Daniel Mar\\source\\repos\\BTP.Test.JDM\\BTP.Test.JDM.BackEnd.API\\BTP.Test.JDM.BackEnd.API.csproj",
+      "projectPath": "C:\\Git\\Test\\BTP.Test.JDM\\BTP.Test.JDM.BackEnd.API\\BTP.Test.JDM.BackEnd.API.csproj",
       "packagesPath": "C:\\Users\\Daniel Mar\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Daniel Mar\\source\\repos\\BTP.Test.JDM\\BTP.Test.JDM.BackEnd.API\\obj\\",
+      "outputPath": "C:\\Git\\Test\\BTP.Test.JDM\\BTP.Test.JDM.BackEnd.API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Daniel Mar\\AppData\\Roaming\\NuGet\\NuGet.Config",
