@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 #nullable disable
 
@@ -11,7 +12,7 @@ namespace BTP.Test.JDM.BackEnd.API.Models
         {
             AssignmentsStudents = new HashSet<AssignmentsStudent>();
         }
-
+        
         public int Id { get; set; }
         public string Name { get; set; }
         public DateTime Birth { get; set; }
