@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31025.194
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BTP.Test.JDM.BackEnd.API", "BTP.Test.JDM.BackEnd.API\BTP.Test.JDM.BackEnd.API.csproj", "{F9E6C902-9991-43F2-904B-21707BFB5CEF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BTP.Test.JDM.BackEnd.API", "BTP.Test.JDM.BackEnd.API\BTP.Test.JDM.BackEnd.API.csproj", "{F9E6C902-9991-43F2-904B-21707BFB5CEF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BPT.Test.JDM.BackEnd.DataAccess", "BPT.Test.JDM.BackEnd.DataAccess\BPT.Test.JDM.BackEnd.DataAccess.csproj", "{8A63102C-EFDF-4C05-A258-8715F1D1E35A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BPT.Test.JDM.FrontEnd.Client", "BPT.Test.JDM.FrontEnd.Client\BPT.Test.JDM.FrontEnd.Client.csproj", "{F245EC3E-E86D-49F3-8B94-9DC06D3642C1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{F9E6C902-9991-43F2-904B-21707BFB5CEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F9E6C902-9991-43F2-904B-21707BFB5CEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F9E6C902-9991-43F2-904B-21707BFB5CEF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A63102C-EFDF-4C05-A258-8715F1D1E35A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A63102C-EFDF-4C05-A258-8715F1D1E35A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A63102C-EFDF-4C05-A258-8715F1D1E35A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A63102C-EFDF-4C05-A258-8715F1D1E35A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F245EC3E-E86D-49F3-8B94-9DC06D3642C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F245EC3E-E86D-49F3-8B94-9DC06D3642C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F245EC3E-E86D-49F3-8B94-9DC06D3642C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F245EC3E-E86D-49F3-8B94-9DC06D3642C1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
