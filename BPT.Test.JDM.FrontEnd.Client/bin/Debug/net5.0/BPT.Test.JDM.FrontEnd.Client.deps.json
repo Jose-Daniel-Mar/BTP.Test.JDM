@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "BPT.Test.JDM.FrontEnd.Client/1.0.0": {
+        "dependencies": {
+          "BPT.Test.JDM.BackEnd.DataAccess": "1.0.0"
+        },
+        "runtime": {
+          "BPT.Test.JDM.FrontEnd.Client.dll": {}
+        }
+      },
+      "BPT.Test.JDM.BackEnd.DataAccess/1.0.0": {
+        "runtime": {
+          "BPT.Test.JDM.BackEnd.DataAccess.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "BPT.Test.JDM.FrontEnd.Client/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "BPT.Test.JDM.BackEnd.DataAccess/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

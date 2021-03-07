@@ -5,31 +5,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="obj\Debug\net5.0\.NETCoreApp,Version=v5.0.AssemblyAttributes.cs" />
-    <Compile Include="obj\Debug\net5.0\BTP.Test.JDM.BackEnd.API.AssemblyInfo.cs" />
-    <Compile Include="obj\Debug\net5.0\BTP.Test.JDM.BackEnd.API.MvcApplicationPartsAssemblyInfo.cs" />
-    <Compile Include="obj\Debug\net5.0\BTP.Test.JDM.BackEnd.API.RazorAssemblyInfo.cs" />
-    <Compile Include="obj\Debug\net5.0\BTP.Test.JDM.BackEnd.API.RazorTargetAssemblyInfo.cs" />
-    <Compile Include="obj\Debug\net5.0\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs" />
-    <Compile Include="obj\Debug\net5.0\Razor\Views\Students\Create.cshtml.g.cs" />
-    <Compile Include="obj\Debug\net5.0\Razor\Views\Students\Delete.cshtml.g.cs" />
-    <Compile Include="obj\Debug\net5.0\Razor\Views\Students\Details.cshtml.g.cs" />
-    <Compile Include="obj\Debug\net5.0\Razor\Views\Students\Edit.cshtml.g.cs" />
-    <Compile Include="obj\Debug\net5.0\Razor\Views\Students\Index.cshtml.g.cs" />
-    <Compile Include="obj\Release\net5.0\.NETCoreApp,Version=v5.0.AssemblyAttributes.cs" />
-    <Compile Include="obj\Release\net5.0\BTP.Test.JDM.BackEnd.API.AssemblyInfo.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Content Include="bin\Debug\net5.0\appsettings.Development.json" />
     <Content Include="bin\Debug\net5.0\appsettings.json" />
     <Content Include="bin\Debug\net5.0\BTP.Test.JDM.BackEnd.API.deps.json" />
     <Content Include="bin\Debug\net5.0\BTP.Test.JDM.BackEnd.API.runtimeconfig.dev.json" />
     <Content Include="bin\Debug\net5.0\BTP.Test.JDM.BackEnd.API.runtimeconfig.json" />
-    <Content Include="obj\BTP.Test.JDM.BackEnd.API.csproj.nuget.dgspec.json" />
-    <Content Include="obj\Debug\net5.0\BTP.Test.JDM.BackEnd.API.csproj.FileListAbsolute.txt" />
-    <Content Include="obj\Debug\net5.0\staticwebassets\BTP.Test.JDM.BackEnd.API.StaticWebAssets.xml" />
-    <Content Include="obj\project.assets.json" />
   </ItemGroup>
 
   <ItemGroup>
@@ -149,32 +129,6 @@
     <None Include="bin\Debug\net5.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" />
     <None Include="bin\Debug\net5.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll" />
     <None Include="bin\Debug\net5.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll" />
-    <None Include="obj\BTP.Test.JDM.BackEnd.API.csproj.nuget.g.props" />
-    <None Include="obj\BTP.Test.JDM.BackEnd.API.csproj.nuget.g.targets" />
-    <None Include="obj\Debug\net5.0\apphost.exe" />
-    <None Include="obj\Debug\net5.0\BTP.Test.JDM.BackEnd.API.AssemblyInfoInputs.cache" />
-    <None Include="obj\Debug\net5.0\BTP.Test.JDM.BackEnd.API.assets.cache" />
-    <None Include="obj\Debug\net5.0\BTP.Test.JDM.BackEnd.API.csproj.CopyComplete" />
-    <None Include="obj\Debug\net5.0\BTP.Test.JDM.BackEnd.API.csproj.CoreCompileInputs.cache" />
-    <None Include="obj\Debug\net5.0\BTP.Test.JDM.BackEnd.API.csprojAssemblyReference.cache" />
-    <None Include="obj\Debug\net5.0\BTP.Test.JDM.BackEnd.API.dll" />
-    <None Include="obj\Debug\net5.0\BTP.Test.JDM.BackEnd.API.GeneratedMSBuildEditorConfig.editorconfig" />
-    <None Include="obj\Debug\net5.0\BTP.Test.JDM.BackEnd.API.genruntimeconfig.cache" />
-    <None Include="obj\Debug\net5.0\BTP.Test.JDM.BackEnd.API.MvcApplicationPartsAssemblyInfo.cache" />
-    <None Include="obj\Debug\net5.0\BTP.Test.JDM.BackEnd.API.pdb" />
-    <None Include="obj\Debug\net5.0\BTP.Test.JDM.BackEnd.API.RazorAssemblyInfo.cache" />
-    <None Include="obj\Debug\net5.0\BTP.Test.JDM.BackEnd.API.RazorCoreGenerate.cache" />
-    <None Include="obj\Debug\net5.0\BTP.Test.JDM.BackEnd.API.RazorTargetAssemblyInfo.cache" />
-    <None Include="obj\Debug\net5.0\BTP.Test.JDM.BackEnd.API.TagHelpers.input.cache" />
-    <None Include="obj\Debug\net5.0\BTP.Test.JDM.BackEnd.API.TagHelpers.output.cache" />
-    <None Include="obj\Debug\net5.0\BTP.Test.JDM.BackEnd.API.Views.dll" />
-    <None Include="obj\Debug\net5.0\BTP.Test.JDM.BackEnd.API.Views.pdb" />
-    <None Include="obj\Debug\net5.0\ref\BTP.Test.JDM.BackEnd.API.dll" />
-    <None Include="obj\Debug\net5.0\staticwebassets\BTP.Test.JDM.BackEnd.API.StaticWebAssets.Manifest.cache" />
-    <None Include="obj\project.nuget.cache" />
-    <None Include="obj\Release\net5.0\BTP.Test.JDM.BackEnd.API.AssemblyInfoInputs.cache" />
-    <None Include="obj\Release\net5.0\BTP.Test.JDM.BackEnd.API.assets.cache" />
-    <None Include="obj\Release\net5.0\BTP.Test.JDM.BackEnd.API.GeneratedMSBuildEditorConfig.editorconfig" />
   </ItemGroup>
 
   <ItemGroup>
@@ -189,7 +143,6 @@
 
   <ItemGroup>
     <Folder Include="bin\Release\net5.0\ref\" />
-    <Folder Include="obj\Release\net5.0\ref\" />
   </ItemGroup>
 
 </Project>
