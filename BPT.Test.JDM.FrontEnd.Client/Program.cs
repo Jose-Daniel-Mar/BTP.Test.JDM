@@ -18,7 +18,7 @@ namespace BPT.Test.JDM.FrontEnd.Client
                 Console.WriteLine("Choose an option from the following list:");
                 Console.WriteLine("\ts - Students");
                 Console.WriteLine("\ta - Assignments");
-                //Console.WriteLine("\tt - Assign");
+                Console.WriteLine("\tt - Assign");
                 Console.WriteLine("\tx - Exit");
                 Console.WriteLine("------------------------\n");
                 Console.Write("Your option? ");
@@ -107,7 +107,6 @@ namespace BPT.Test.JDM.FrontEnd.Client
                                     optStudent = "x";
                                     break;
                             }
-
                         }
                         break;
 
@@ -191,6 +190,78 @@ namespace BPT.Test.JDM.FrontEnd.Client
 
                         }
                         break;
+
+                    case "t":
+                        ClientControllerAssign controllerAssign = new ClientControllerAssign();
+                        ClientControllerStudents controllerStudentA = new ClientControllerStudents();
+                        ClientControllerAssignments controllerAssignmentA = new ClientControllerAssignments();
+
+                        var optAssign = "";
+                        while (optAssign != "x")
+                        {
+                            Console.WriteLine("-------Assign----------\r");
+                            Console.WriteLine("-----------------------\n");
+                            Console.WriteLine("Choose an option from the following list:");
+                            Console.WriteLine("\tc - Create");
+                            Console.WriteLine("\td - Delete");
+                            Console.WriteLine("\tx - Exit");
+                            Console.WriteLine("------------------------\n");
+                            Console.Write("Your option? ");
+
+                            switch (Console.ReadLine())
+                            {
+                                case "c":
+                                    Console.Clear();
+                                    var studentsA = await controllerStudentA.ReadStudents();
+                                    var assignmentsA = await controllerAssignmentA.ReadAssignments();
+                                    Console.WriteLine("-------Create Assign----------\r");
+                                    Console.WriteLine("------------------------\n");
+                                    foreach (Student student in studentsA)
+                                    {
+                                        Console.WriteLine(student.Id + ": " + student.Name);
+                                    }
+                                    Console.WriteLine("------------------------\n");
+                                    Console.WriteLine("Type a student Id:");
+                                    var idS = Convert.ToInt32(Console.ReadLine());
+                                    Console.Clear();
+                                    Console.WriteLine("-------Create Assign----------\r");
+                                    Console.WriteLine("------------------------\n");
+                                    foreach (Assignment assignment in assignmentsA)
+                                    {
+                                        Console.WriteLine(assignment.Id + ": " + assignment.Name);
+                                    }
+                                    Console.WriteLine("------------------------\n");
+                                    Console.WriteLine("Type a assignment Id:");
+                                    var idA = Convert.ToInt32(Console.ReadLine());
+                                    var responseCreate = await controllerAssign.CreateAssign(idS, idA);
+                                    Console.Clear();
+                                    Console.WriteLine("-------Result----------");
+                                    Console.WriteLine("Assigned: Id = " + responseCreate.Id);
+                                    Console.WriteLine("------------------------\n");
+                                    break;
+                                
+                                //case "d":
+                                //    Console.Clear();
+                                //    var studentsD = await controllerStudentA.ReadStudents();
+                                //    var assignmentsD = await controllerAssignmentA.ReadAssignments();
+                                //    Console.WriteLine("-------Delete Assign----------\r");
+                                //    Console.WriteLine("------------------------\n");
+                                //    Console.WriteLine("Type a Assignment Id:");
+                                //    var Id = Convert.ToInt32(Console.ReadLine());
+                                //    var responseDelete = await controllerAssignment.DeleteAssignment(Id);
+                                //    Console.Clear();
+                                //    Console.WriteLine("-------Result----------");
+                                //    Console.WriteLine("Assignment deleted: Id = " + responseDelete);
+                                //    Console.WriteLine("------------------------\n");
+                                //    break;
+                                case "x":
+                                    optAssignment = "x";
+                                    break;
+                            }
+
+                        }
+                        break;
+
                     case "x":
                         value = "x";
                         break;
