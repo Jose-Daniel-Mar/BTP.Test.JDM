@@ -2,6 +2,7 @@ C:\Git\Test\BTP.Test.JDM\BPT.Test.JDM.BackEnd.DataAccess\bin\Debug\net5.0\BPT.Te
 C:\Git\Test\BTP.Test.JDM\BPT.Test.JDM.BackEnd.DataAccess\bin\Debug\net5.0\BPT.Test.JDM.BackEnd.DataAccess.dll
 C:\Git\Test\BTP.Test.JDM\BPT.Test.JDM.BackEnd.DataAccess\bin\Debug\net5.0\ref\BPT.Test.JDM.BackEnd.DataAccess.dll
 C:\Git\Test\BTP.Test.JDM\BPT.Test.JDM.BackEnd.DataAccess\bin\Debug\net5.0\BPT.Test.JDM.BackEnd.DataAccess.pdb
+C:\Git\Test\BTP.Test.JDM\BPT.Test.JDM.BackEnd.DataAccess\obj\Debug\net5.0\BPT.Test.JDM.BackEnd.DataAccess.csprojAssemblyReference.cache
 C:\Git\Test\BTP.Test.JDM\BPT.Test.JDM.BackEnd.DataAccess\obj\Debug\net5.0\BPT.Test.JDM.BackEnd.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
 C:\Git\Test\BTP.Test.JDM\BPT.Test.JDM.BackEnd.DataAccess\obj\Debug\net5.0\BPT.Test.JDM.BackEnd.DataAccess.AssemblyInfoInputs.cache
 C:\Git\Test\BTP.Test.JDM\BPT.Test.JDM.BackEnd.DataAccess\obj\Debug\net5.0\BPT.Test.JDM.BackEnd.DataAccess.AssemblyInfo.cs

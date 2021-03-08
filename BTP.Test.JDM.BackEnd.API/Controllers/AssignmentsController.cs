@@ -32,13 +32,13 @@ namespace BTP.Test.JDM.BackEnd.API.Controllers
             {
                 return NotFound();
             }
-            var Assignment = _context.Assignments.FirstOrDefault(m => m.Id == id);
-            if (Assignment == null)
+            var assignment = _context.Assignments.FirstOrDefault(m => m.Id == id);
+            if (assignment == null)
             {
                 return NotFound();
             }
 
-            return Assignment;
+            return assignment;
         }
 
         [HttpPost]

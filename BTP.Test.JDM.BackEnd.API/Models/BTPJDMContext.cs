@@ -36,37 +36,22 @@ namespace BTP.Test.JDM.BackEnd.API.Models
 
             modelBuilder.Entity<Assignment>(entity =>
             {
-                entity.Property(e => e.Name)
-                    .IsRequired()
-                    .HasMaxLength(50)
-                    .IsUnicode(false);
+                entity.Property(e => e.Name).IsRequired().HasMaxLength(50).IsUnicode(false);
             });
 
             modelBuilder.Entity<AssignmentsStudent>(entity =>
             {
                 entity.ToTable("AssignmentsStudent");
-
-                entity.HasOne(d => d.IdAssignmentNavigation)
-                    .WithMany(p => p.AssignmentsStudents)
-                    .HasForeignKey(d => d.IdAssignment)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK_AssignmentsStudent_Assignments1");
-
-                entity.HasOne(d => d.IdStudentNavigation)
-                    .WithMany(p => p.AssignmentsStudents)
-                    .HasForeignKey(d => d.IdStudent)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK_AssignmentsStudent_Students1");
+                entity.HasOne(d => d.IdAssignmentNavigation).WithMany(p => p.AssignmentsStudents).HasForeignKey(d => d.IdAssignment).OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_AssignmentsStudent_Assignments1");
+                entity.HasOne(d => d.IdStudentNavigation).WithMany(p => p.AssignmentsStudents).HasForeignKey(d => d.IdStudent).OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_AssignmentsStudent_Students1");
             });
 
             modelBuilder.Entity<Student>(entity =>
             {
                 entity.Property(e => e.Birth).HasColumnType("datetime");
-
-                entity.Property(e => e.Name)
-                    .IsRequired()
-                    .HasMaxLength(50)
-                    .IsUnicode(false);
+                entity.Property(e => e.Name).IsRequired().HasMaxLength(50).IsUnicode(false);
             });
 
             OnModelCreatingPartial(modelBuilder);

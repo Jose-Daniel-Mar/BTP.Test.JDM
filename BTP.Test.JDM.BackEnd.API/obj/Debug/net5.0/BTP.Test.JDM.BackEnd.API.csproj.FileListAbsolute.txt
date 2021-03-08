@@ -8,6 +8,7 @@ C:\Git\Test\BTP.Test.JDM\BTP.Test.JDM.BackEnd.API\bin\Debug\net5.0\BTP.Test.JDM.
 C:\Git\Test\BTP.Test.JDM\BTP.Test.JDM.BackEnd.API\bin\Debug\net5.0\ref\BTP.Test.JDM.BackEnd.API.dll
 C:\Git\Test\BTP.Test.JDM\BTP.Test.JDM.BackEnd.API\bin\Debug\net5.0\BTP.Test.JDM.BackEnd.API.pdb
 C:\Git\Test\BTP.Test.JDM\BTP.Test.JDM.BackEnd.API\bin\Debug\net5.0\Humanizer.dll
+C:\Git\Test\BTP.Test.JDM\BTP.Test.JDM.BackEnd.API\bin\Debug\net5.0\Microsoft.AspNetCore.Blazor.HttpClient.dll
 C:\Git\Test\BTP.Test.JDM\BTP.Test.JDM.BackEnd.API\bin\Debug\net5.0\Microsoft.AspNetCore.Razor.Language.dll
 C:\Git\Test\BTP.Test.JDM\BTP.Test.JDM.BackEnd.API\bin\Debug\net5.0\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Git\Test\BTP.Test.JDM\BTP.Test.JDM.BackEnd.API\bin\Debug\net5.0\Microsoft.CodeAnalysis.dll

@@ -28,6 +28,11 @@ namespace BTP.Test.JDM.BackEnd.API.Controllers
         [HttpGet("{id}")]
         public ActionResult<Student> Get(int? id)
         {
+            //var studentA = new StudentA();
+            //var assignments = _context.Assignments.ToList();
+
+            //var assignmentsStudents = _context.AssignmentsStudents.Where(x => x.IdStudent == id).ToList();
+
             if (id == null)
             {
                 return NotFound();
@@ -37,7 +42,7 @@ namespace BTP.Test.JDM.BackEnd.API.Controllers
             {
                 return NotFound();
             }
-
+            
             return student;
         }
 
@@ -53,11 +58,10 @@ namespace BTP.Test.JDM.BackEnd.API.Controllers
         [HttpPut("{id}")]
         public ActionResult Put(int id, [FromBody] Student student)
         {
-            if (id != student.Id)
+            if (id == 0)
             {
                 return BadRequest();
             }
-
             _context.Entry(student).State = EntityState.Modified;
             _context.SaveChanges();
             return Ok();
