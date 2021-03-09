@@ -9,6 +9,10 @@ namespace BPT.Test.JDM.FrontEnd.Client
     {
         static async Task Main(string[] args)
         {
+            ClientControllerAssignments controllerAssignment = new ClientControllerAssignments();
+            ClientControllerStudents controllerStudent = new ClientControllerStudents();
+            ClientControllerAssign controllerAssign = new ClientControllerAssign();
+            
             var value = "";
             while(value != "x")
             {
@@ -18,7 +22,7 @@ namespace BPT.Test.JDM.FrontEnd.Client
                 Console.WriteLine("Choose an option from the following list:");
                 Console.WriteLine("\ts - Students");
                 Console.WriteLine("\ta - Assignments");
-                Console.WriteLine("\tt - Assign");
+                Console.WriteLine("\tt - Assignments-Students");
                 Console.WriteLine("\tx - Exit");
                 Console.WriteLine("------------------------\n");
                 Console.Write("Your option? ");
@@ -26,7 +30,7 @@ namespace BPT.Test.JDM.FrontEnd.Client
                 switch (value)
                 {
                     case "s":
-                        ClientControllerStudents controllerStudent = new ClientControllerStudents();
+                        
                         var optStudent = "";
                         while(optStudent != "x")
                         {
@@ -70,10 +74,21 @@ namespace BPT.Test.JDM.FrontEnd.Client
                                     int id = Convert.ToInt32(Console.ReadLine());
                                     var responseRead = await controllerStudent.ReadStudent(id);
                                     Console.Clear();
+                                    var assignments = await controllerAssignment.ReadAssignments();
+                                    foreach (Assignment assignment in assignments)
+                                    {
+                                        Console.WriteLine(assignment.Id + ": " + assignment.Name);
+                                    }
                                     Console.WriteLine("-------Result----------");
                                     Console.WriteLine("Student Id: " + responseRead.Id);
                                     Console.WriteLine("Student Name: " + responseRead.Name);
                                     Console.WriteLine("Student Birth: " + responseRead.Birth);
+                                    Console.WriteLine("Assignments[");
+                                    foreach (AssignmentsStudent val in responseRead.AssignmentsStudents)
+                                    {
+                                        Console.WriteLine("idAssignment: " + val.IdAssignment);
+                                    }
+                                    Console.WriteLine("]");
                                     Console.WriteLine("------------------------\n");
                                     break;
                                 case "u":
@@ -111,7 +126,6 @@ namespace BPT.Test.JDM.FrontEnd.Client
                         break;
 
                     case "a":
-                        ClientControllerAssignments controllerAssignment = new ClientControllerAssignments();
                         var optAssignment = "";
                         while (optAssignment != "x")
                         {
@@ -153,9 +167,20 @@ namespace BPT.Test.JDM.FrontEnd.Client
                                     int id = Convert.ToInt32(Console.ReadLine());
                                     var responseRead = await controllerAssignment.ReadAssignment(id);
                                     Console.Clear();
+                                    var students = await controllerStudent.ReadStudents();
+                                    foreach (Student student in students)
+                                    {
+                                        Console.WriteLine(student.Id + ": " + student.Name);
+                                    }
                                     Console.WriteLine("-------Result----------");
                                     Console.WriteLine("Assignment Id: " + responseRead.Id);
                                     Console.WriteLine("Assignment Name: " + responseRead.Name);
+                                    Console.WriteLine("Students[");
+                                    foreach (AssignmentsStudent val in responseRead.AssignmentsStudents)
+                                    {
+                                        Console.WriteLine("idStudent: " + val.IdStudent);
+                                    }
+                                    Console.WriteLine("]");
                                     Console.WriteLine("------------------------\n");
                                     break;
                                 case "u":
@@ -192,18 +217,15 @@ namespace BPT.Test.JDM.FrontEnd.Client
                         break;
 
                     case "t":
-                        ClientControllerAssign controllerAssign = new ClientControllerAssign();
-                        ClientControllerStudents controllerStudentA = new ClientControllerStudents();
-                        ClientControllerAssignments controllerAssignmentA = new ClientControllerAssignments();
-
                         var optAssign = "";
                         while (optAssign != "x")
                         {
+                            Console.Clear();
                             Console.WriteLine("-------Assign----------\r");
                             Console.WriteLine("-----------------------\n");
                             Console.WriteLine("Choose an option from the following list:");
-                            Console.WriteLine("\tc - Create");
-                            Console.WriteLine("\td - Delete");
+                            Console.WriteLine("\tc - Assign student");
+                            Console.WriteLine("\td - Delete assign");
                             Console.WriteLine("\tx - Exit");
                             Console.WriteLine("------------------------\n");
                             Console.Write("Your option? ");
@@ -212,8 +234,8 @@ namespace BPT.Test.JDM.FrontEnd.Client
                             {
                                 case "c":
                                     Console.Clear();
-                                    var studentsA = await controllerStudentA.ReadStudents();
-                                    var assignmentsA = await controllerAssignmentA.ReadAssignments();
+                                    var studentsA = await controllerStudent.ReadStudents();
+                                    var assignmentsA = await controllerAssignment.ReadAssignments();
                                     Console.WriteLine("-------Create Assign----------\r");
                                     Console.WriteLine("------------------------\n");
                                     foreach (Student student in studentsA)
@@ -239,26 +261,42 @@ namespace BPT.Test.JDM.FrontEnd.Client
                                     Console.WriteLine("Assigned: Id = " + responseCreate.Id);
                                     Console.WriteLine("------------------------\n");
                                     break;
-                                
-                                //case "d":
-                                //    Console.Clear();
-                                //    var studentsD = await controllerStudentA.ReadStudents();
-                                //    var assignmentsD = await controllerAssignmentA.ReadAssignments();
-                                //    Console.WriteLine("-------Delete Assign----------\r");
-                                //    Console.WriteLine("------------------------\n");
-                                //    Console.WriteLine("Type a Assignment Id:");
-                                //    var Id = Convert.ToInt32(Console.ReadLine());
-                                //    var responseDelete = await controllerAssignment.DeleteAssignment(Id);
-                                //    Console.Clear();
-                                //    Console.WriteLine("-------Result----------");
-                                //    Console.WriteLine("Assignment deleted: Id = " + responseDelete);
-                                //    Console.WriteLine("------------------------\n");
-                                //    break;
+
+                                case "d":
+                                    Console.Clear();
+                                    Console.WriteLine("-------Delete Assign----------\r");
+                                    Console.WriteLine("------------------------\n");
+                                    Console.WriteLine("Type a Student Id:");
+                                    var IdS = Convert.ToInt32(Console.ReadLine());
+                                    var assignments = await controllerAssignment.ReadAssignments();
+                                    Console.WriteLine("-------Assignments----------\r");
+                                    Console.WriteLine("------------------------\n");
+                                    foreach (Assignment assignment in assignments)
+                                    {
+                                        Console.WriteLine(assignment.Id + ": " + assignment.Name);
+                                    }
+                                    Console.WriteLine("------------------------\n");
+                                    Console.WriteLine("Choose an Assign-Student Id:\n");
+                                    var values = await controllerAssign.ReadAssigns(IdS);
+                                    foreach (AssignmentsStudent assignment in values)
+                                    {
+                                        Console.WriteLine("Assignment-Student Id: " + assignment.Id);
+                                        Console.WriteLine("assigment id: " + assignment.IdAssignment);
+                                        Console.WriteLine("------------------------\n");
+                                    }
+                                    Console.WriteLine("------------------------\n");
+                                    Console.WriteLine("Type a Assignment-Student Id:");
+                                    var IdA = Convert.ToInt32(Console.ReadLine());
+                                    var responseDelete = await controllerAssign.DeleteAssign(IdA);
+                                    Console.Clear();
+                                    Console.WriteLine("-------Result----------");
+                                    Console.WriteLine("Assignment-Student deleted: Id = " + responseDelete);
+                                    Console.WriteLine("------------------------\n");
+                                    break;
                                 case "x":
-                                    optAssignment = "x";
+                                    optAssign = "x";
                                     break;
                             }
-
                         }
                         break;
 

@@ -32,7 +32,9 @@ namespace BTP.Test.JDM.BackEnd.API.Controllers
             {
                 return NotFound();
             }
-            var assignment = _context.Assignments.FirstOrDefault(m => m.Id == id);
+
+            var assignment = _context.Assignments.Include(x => x.AssignmentsStudents).FirstOrDefault(m => m.Id == id);
+
             if (assignment == null)
             {
                 return NotFound();

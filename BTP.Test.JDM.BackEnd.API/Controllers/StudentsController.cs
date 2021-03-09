@@ -30,19 +30,20 @@ namespace BTP.Test.JDM.BackEnd.API.Controllers
         {
             //var studentA = new StudentA();
             //var assignments = _context.Assignments.ToList();
-
             //var assignmentsStudents = _context.AssignmentsStudents.Where(x => x.IdStudent == id).ToList();
-
+            //var value = _context.AssignmentsStudents.FromSqlRaw("EXECUTE studentDetails " + id).ToList();
+            
             if (id == null)
             {
                 return NotFound();
             }
-            var student = _context.Students.FirstOrDefault(m => m.Id == id);
+
+            var student = _context.Students.Include(x => x.AssignmentsStudents).FirstOrDefault(m => m.Id == id);
+
             if (student == null)
             {
                 return NotFound();
             }
-            
             return student;
         }
 

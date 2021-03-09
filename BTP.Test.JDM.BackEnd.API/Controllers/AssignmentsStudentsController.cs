@@ -21,7 +21,10 @@ namespace BTP.Test.JDM.BackEnd.API.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<AssignmentsStudent>> Get()
         {
-            return _context.AssignmentsStudents.ToList();
+            
+            var value = _context.AssignmentsStudents.Include(x => x.IdAssignmentNavigation).Include(x => x.IdStudentNavigation).ToList();
+
+            return value;
         }
 
         // GET: Assignment/Details/5

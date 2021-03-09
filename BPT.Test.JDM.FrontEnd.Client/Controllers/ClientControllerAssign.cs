@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Components;
 using Newtonsoft.Json;
 using System.Collections.Generic;
+using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Net.Http.Json;
@@ -32,12 +33,12 @@ namespace BPT.Test.JDM.FrontEnd.Client.Controllers
                 }
             }
         }
-
-        public async Task<List<AssignmentsStudent>> ReadAssigns()
+        public async Task<List<AssignmentsStudent>> ReadAssigns(int id)
         {
             using (var httpClient = new HttpClient())
             {
                 var response = await httpClient.GetJsonAsync<List<AssignmentsStudent>>(url + "/AssignmentsStudents");
+                response = response.Where(x => x.IdStudent == id).ToList();
                 return response;
             }
         }
@@ -56,7 +57,7 @@ namespace BPT.Test.JDM.FrontEnd.Client.Controllers
                 }
             }
         }
-        public async Task<int> DeleteAssignmentsStudent(int id)
+        public async Task<int> DeleteAssign(int id)
         {
             using (var httpClient = new HttpClient())
             {
